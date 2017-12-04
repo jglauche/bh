@@ -39,15 +39,11 @@ module Bh4
 
       link_to.append_class! :'alert-link' if Bh4::Stack.find(Bh4::AlertBox)
       link_to.append_class! :'navbar-brand' if Bh4::Stack.find(Bh4::Vertical)
-      link_to.merge! role: :menuitem if Bh4::Stack.find(Bh4::Dropdown)
+      link_to.append_class! :'dropdown-item' if Bh4::Stack.find(Bh4::Dropdown)
       link_to.merge! tabindex: -1 if Bh4::Stack.find(Bh4::Dropdown)
       html = super link_to.content, link_to.url, link_to.attributes, &nil
 
-      if Bh4::Stack.find(Bh4::Dropdown)
-        container = Bh4::Base.new(self) { html }
-        container.merge! role: :presentation
-        container.render_tag :li
-      elsif Bh4::Stack.find(Bh4::Nav)
+      if Bh4::Stack.find(Bh4::Nav)
         container = Bh4::Base.new(self) { html }
         container.append_class! :active if link_to.current_page?
         container.render_tag :li

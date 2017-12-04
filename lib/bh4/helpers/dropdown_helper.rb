@@ -40,8 +40,8 @@ module Bh4
       dropdown.append_class_to! :button, dropdown.layout_class
       dropdown.append_class_to! :div, dropdown.groupable_class
       dropdown.append_class_to! :div, dropdown.direction_class
-      dropdown.append_class_to! :ul, :'dropdown-menu'
-      dropdown.append_class_to! :ul, dropdown.align_class
+      #dropdown.append_class_to! :ul, :'dropdown-menu'
+      #dropdown.append_class_to! :ul, dropdown.align_class
 
       dropdown.render_partial dropdown.partial
     end
