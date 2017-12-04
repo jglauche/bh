@@ -18,7 +18,7 @@ module Bh4
     end
   end
 
-  Bh.framework = :middleman
+  Bh4.framework = :middleman
 end
 
 ::Middleman::Extensions.register(:bh4. Bh4::Extensions::MiddlemanExtension)

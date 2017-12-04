@@ -23,5 +23,5 @@ module Bh4
     end
   end
 
-  Bh.framework = :rails
+  Bh4.framework = :rails
 end

@@ -17,7 +17,7 @@ module Bh4
       end
     end
 
-    Bh.framework = :padrino
+    Bh4.framework = :padrino
   end
 
   # Allows to register Bh in a Padrino app simply with `register Bh`.

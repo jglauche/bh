@@ -9,11 +9,11 @@ module Bh4
       end
 
       def current_page?
-        case Bh.framework
+        case Bh4.framework
         when :rails
           @app.current_page? @url
         when :padrino, :middleman
-          request = Bh.framework == :middleman ? @app.req : @app.request
+          request = Bh4.framework == :middleman ? @app.req : @app.request
           request.path_info == @app.url_for(@url)
         end
       end
