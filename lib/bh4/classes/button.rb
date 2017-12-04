@@ -24,12 +24,15 @@ module Bh4
       #   append to buttons for each possible context.
       def self.contexts
         HashWithIndifferentAccess.new(:'btn-default').tap do |klass|
-          klass[:danger]  = :'btn-danger'
-          klass[:info]    = :'btn-info'
-          klass[:link]    = :'btn-link'
-          klass[:primary] = :'btn-primary'
-          klass[:success] = :'btn-success'
-          klass[:warning] = :'btn-warning'
+          klass[:danger]    = :'btn-danger'
+          klass[:info]      = :'btn-info'
+          klass[:link]      = :'btn-link'
+          klass[:primary]   = :'btn-primary'
+					klass[:secondary] = :'btn-secondary'
+          klass[:success]   = :'btn-success'
+          klass[:warning]   = :'btn-warning'
+					klass[:light]     = :'btn-light'
+					klass[:dark]      = :'btn-dark'	
         end
       end
 
