@@ -1,5 +1,12 @@
-Bh · Bootstrap Helpers
+Bh4 · Bootstrap Helpers
 ======================
+
+This fork of BH aims to provide boostrap helpers for [Boostrap 4][https://getbootstrap.com/docs/4.0/]
+
+This is work in progress.
+
+--- old readme below ---
+
 
 A set of Ruby helpers that streamlines the use of
 [Bootstrap 3 components](http://getbootstrap.com/components) in HTML views.

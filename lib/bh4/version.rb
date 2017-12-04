@@ -1,3 +1,3 @@
 module Bh
-  VERSION = '1.3.6'
+  VERSION = '0.0.1'
 end

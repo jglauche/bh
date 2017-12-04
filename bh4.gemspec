@@ -4,12 +4,12 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'bh/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "bh"
+  spec.name          = "bh4"
   spec.version       = Bh::VERSION
-  spec.authors       = ["Claudio Baccigalupo"]
-  spec.email         = ["claudio@fullscreen.net"]
-  spec.description   = %q{Bh - Bootstrap Helpers}
-  spec.summary       = %q{Bh provides a set of powerful helpers that
+  spec.authors       = ["Jennifer Glauche", "Claudio Baccigalupo"]
+  spec.email         = ["=^.^=@bh4.jglauche.de", "claudio@fullscreen.net"]
+  spec.description   = %q{Bh4 - Bootstrap 4 Helpers}
+  spec.summary       = %q{Bh4 provides a set of powerful helpers that
     streamlines the use of Bootstrap components in Rails views.}
   spec.homepage      = "http://github.com/Fullscreen/bh"
   spec.license       = "MIT"
