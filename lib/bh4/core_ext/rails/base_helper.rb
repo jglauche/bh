@@ -1,6 +1,6 @@
 require 'action_view'
 
-module Bh
+module Bh4
   module Rails
     # @api private
     module BaseHelper

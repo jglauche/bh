@@ -1,6 +1,6 @@
-require 'bh/classes/panel_row'
+require 'bh4/classes/panel_row'
 
-module Bh
+module Bh4
   module Helpers
     # Wraps a set of Bootstrap-styled panels in a row.
     # @see http://getbootstrap.com/components/#panels
@@ -18,7 +18,7 @@ module Bh
     #     panel 'Panel #2', context: :info
     #   end
     def panel_row(options = {}, &block)
-      panel_row = Bh::PanelRow.new self, options, &block
+      panel_row = Bh4::PanelRow.new self, options, &block
       panel_row.extract! :column_class
 
       panel_row.append_class! :row

@@ -8,7 +8,7 @@ class RailsView
   include ActionView::Helpers::TagHelper # for content_tag
   include ActionView::Helpers::UrlHelper # for link_to
 
-  include Bh::Helpers
+  include Bh4::Helpers
 
   def initialize
   end

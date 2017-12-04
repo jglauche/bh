@@ -1,15 +1,15 @@
-require 'bh/core_ext/rails/form/check_box_helper'
-require 'bh/core_ext/rails/form/field_helper'
-require 'bh/core_ext/rails/form/fieldset_helper'
-require 'bh/core_ext/rails/form/fields_for_helper'
-require 'bh/core_ext/rails/form/file_field_helper'
-require 'bh/core_ext/rails/form/legend_helper'
-require 'bh/core_ext/rails/form/radio_button_helper'
-require 'bh/core_ext/rails/form/select_helper'
-require 'bh/core_ext/rails/form/static_control_helper'
-require 'bh/core_ext/rails/form/submit_helper'
+require 'bh4/core_ext/rails/form/check_box_helper'
+require 'bh4/core_ext/rails/form/field_helper'
+require 'bh4/core_ext/rails/form/fieldset_helper'
+require 'bh4/core_ext/rails/form/fields_for_helper'
+require 'bh4/core_ext/rails/form/file_field_helper'
+require 'bh4/core_ext/rails/form/legend_helper'
+require 'bh4/core_ext/rails/form/radio_button_helper'
+require 'bh4/core_ext/rails/form/select_helper'
+require 'bh4/core_ext/rails/form/static_control_helper'
+require 'bh4/core_ext/rails/form/submit_helper'
 
-module Bh
+module Bh4
   # @api private
   class FormBuilder < ActionView::Helpers::FormBuilder
     include ActionView::Helpers::SanitizeHelper

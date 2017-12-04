@@ -22,15 +22,15 @@ RSpec::Matchers.define :link_to_existing_file do
     open_uri_options = {ssl_verify_mode: OpenSSL::SSL::VERIFY_NONE}
 
     # via HTTP
-    open bh.send(helper, scheme: :http), open_uri_options
+    open bh4.send(helper, scheme: :http), open_uri_options
 
     # via HTTPS
-    open bh.send(helper, scheme: :https), open_uri_options
+    open bh4.send(helper, scheme: :https), open_uri_options
 
     # non-minified
-    open bh.send(helper, scheme: :http, minified: false), open_uri_options
+    open bh4.send(helper, scheme: :http, minified: false), open_uri_options
 
     # legacy version
-    open bh.send(helper, scheme: :http, version: '3.1.0'), open_uri_options
+    open bh4.send(helper, scheme: :http, version: '3.1.0'), open_uri_options
   end
 end

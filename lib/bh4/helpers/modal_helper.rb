@@ -1,6 +1,6 @@
-require 'bh/classes/modal'
+require 'bh4/classes/modal'
 
-module Bh
+module Bh4
   module Helpers
     # Displays a Bootstrap-styled modal.
     # @see http://getbootstrap.com/javascript/#modals
@@ -36,7 +36,7 @@ module Bh
     #         end
     #       end
     def modal(*args, &block)
-      modal = Bh::Modal.new self, *args, &block
+      modal = Bh4::Modal.new self, *args, &block
       modal.extract! :button, :size, :body, :title, :id
 
       modal.extract_from :button, [:context, :size, :layout, :caption]

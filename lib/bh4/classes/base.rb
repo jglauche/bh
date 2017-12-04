@@ -1,9 +1,9 @@
-require 'bh/classes/stack'
+require 'bh4/classes/stack'
 require 'ostruct'
 require 'active_support'
 require 'active_support/core_ext'
 
-module Bh
+module Bh4
   # @api private
   module Classes
     class Base
@@ -41,7 +41,7 @@ module Bh
       end
 
       def render_partial(partial)
-        file = File.expand_path "../../views/bh/_#{partial}.html.erb", __FILE__
+        file = File.expand_path "../../views/bh4/_#{partial}.html.erb", __FILE__
         template = ERB.new(File.read file)
         assigns = OpenStruct.new attributes.merge(content: @content)
         render template.result(assigns.instance_eval{ binding &nil }).html_safe

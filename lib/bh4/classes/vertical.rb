@@ -1,6 +1,6 @@
-require 'bh/classes/base'
+require 'bh4/classes/base'
 
-module Bh
+module Bh4
   module Classes
     class Vertical < Base
       def toggle_button(navbar_id, options = {})

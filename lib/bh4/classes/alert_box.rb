@@ -1,6 +1,6 @@
-require 'bh/classes/base'
+require 'bh4/classes/base'
 
-module Bh
+module Bh4
   module Classes
     class AlertBox < Base
       # @return [#to_s] the content-related class to assign to the alert box.
@@ -11,7 +11,7 @@ module Bh
       # @return [#to_s] the HTML to show a dismissible button for the alert box.
       def dismissible_button
         if @options[:dismissible] || @options[:priority]
-          path = '../../views/bh/_alert_dismiss_button.html'
+          path = '../../views/bh4/_alert_dismiss_button.html'
           File.read File.expand_path(path, __FILE__)
         end
       end

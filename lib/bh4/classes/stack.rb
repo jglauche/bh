@@ -1,4 +1,4 @@
-module Bh
+module Bh4
   module Classes
     class Stack
       @@stack = []

@@ -1,6 +1,6 @@
-require 'bh/classes/button'
+require 'bh4/classes/button'
 
-module Bh
+module Bh4
   module Helpers
     # Displays a Bootstrap-styled button.
     # @see http://getbootstrap.com/css/#buttons
@@ -27,7 +27,7 @@ module Bh
     #         content_tag :strong, 'Click here'
     #       end
     def button(*args, &block)
-      button = Bh::Button.new(self, *args, &block)
+      button = Bh4::Button.new(self, *args, &block)
       button.extract! :context, :size, :layout
 
       button.append_class! :btn

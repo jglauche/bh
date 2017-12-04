@@ -1,10 +1,10 @@
-require 'bh/helpers/panel_helper'
+require 'bh4/helpers/panel_helper'
 
-module Bh
+module Bh4
   module Form
     module FieldsetHelper
       include BaseHelper
-      include Bh::Helpers # for panel
+      include Bh4::Helpers # for panel
 
       def fieldset(title = nil, &block)
         options = {tag: :fieldset, body: @template.capture(&block)}

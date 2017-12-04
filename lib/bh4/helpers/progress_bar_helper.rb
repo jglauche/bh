@@ -1,6 +1,6 @@
-require 'bh/classes/progress_bar'
+require 'bh4/classes/progress_bar'
 
-module Bh
+module Bh4
   module Helpers
     # Displays one or more Bootstrap-styled progress bars.
     # @see http://getbootstrap.com/components/#progress
@@ -34,7 +34,7 @@ module Bh
     #       progress_bar [{percentage: 30, context: :warning}, {percentage: 20}]
     def progress_bar(args = nil, container_options = {})
       progress_bars = Array.wrap(args).map do |options|
-        progress_bar = Bh::ProgressBar.new self, nil, options
+        progress_bar = Bh4::ProgressBar.new self, nil, options
         progress_bar.extract! :percentage, :context, :striped, :animated, :label
 
         progress_bar.merge! progress_bar.aria_values
@@ -47,7 +47,7 @@ module Bh
         progress_bar
       end
 
-      container = Bh::Base.new self, progress_bars, container_options
+      container = Bh4::Base.new self, progress_bars, container_options
       container.append_class! :progress
       container.render_tag :div
     end

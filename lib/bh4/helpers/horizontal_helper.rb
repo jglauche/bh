@@ -1,6 +1,6 @@
-require 'bh/classes/navbar'
+require 'bh4/classes/navbar'
 
-module Bh
+module Bh4
   module Helpers
     # Displays the collapsable portion of a Bootstrap-styled navbar.
     # @see http://getbootstrap.com/components/#navbar
@@ -24,8 +24,8 @@ module Bh
     #     end
     #   end
     def horizontal(*args, &block)
-      if navbar = Bh::Stack.find(Bh::Navbar)
-        horizontal = Bh::Base.new self, *args, &block
+      if navbar = Bh4::Stack.find(Bh4::Navbar)
+        horizontal = Bh4::Base.new self, *args, &block
         horizontal.append_class! :'collapse navbar-collapse'
         horizontal.merge! id: navbar.id
         horizontal.render_tag :div

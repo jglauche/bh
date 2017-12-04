@@ -29,29 +29,29 @@ end
 shared_examples_for 'the link wrapped in alert_box' do
   specify 'adds the "alert-link" class to the link' do
     html = %r{^<a.+class="alert-link".*>content</a>$}
-    bh.alert_box { expect(:link_to).to generate html }
+    bh4.alert_box { expect(:link_to).to generate html }
   end
 end
 
 shared_examples_for 'the link wrapped in dropdown' do
   specify 'surrounds the link in a <li> and adds role and tabindex' do
     html = %r{<li role="presentation"><a.+role="menuitem" tabindex="-1".*>content</a></li>}
-    bh.dropdown('') { expect(:link_to).to generate html }
+    bh4.dropdown('') { expect(:link_to).to generate html }
   end
 end
 
 shared_examples_for 'the link wrapped in nav' do
   specify 'surrounds the link in a <li> item' do
     html = '<li><a href="/">content</a></li>'
-    bh.nav { expect(:link_to).to generate html }
+    bh4.nav { expect(:link_to).to generate html }
   end
 
   describe 'if the link is to the current page' do
-    before { allow_any_instance_of(Bh::LinkTo).to receive(:current_page?).and_return true }
+    before { allow_any_instance_of(Bh4::LinkTo).to receive(:current_page?).and_return true }
 
     specify 'surrounds the link in a <li class="active"> item' do
       html = '<li class="active"><a href="/">content</a></li>'
-      bh.nav { expect(:link_to).to generate html }
+      bh4.nav { expect(:link_to).to generate html }
     end
   end
 end
@@ -59,8 +59,8 @@ end
 shared_examples_for 'the link wrapped in vertical' do
   specify 'adds the "navbar-brand" class to the link' do
     html = %r{^<a.+class="navbar-brand".*>content</a>$}
-    bh.navbar(id: 'id') do
-      bh.vertical { expect(:link_to).to generate html }
+    bh4.navbar(id: 'id') do
+      bh4.vertical { expect(:link_to).to generate html }
     end
   end
 end
@@ -68,11 +68,11 @@ end
 shared_examples_for 'the link including unsafe Javascript' do
   specify 'uses the original link_to helper which escapes the link' do
     expect(link_to: :xss_script).not_to generate %r{<script>}
-    bh.alert_box { expect(link_to: :xss_script).not_to generate %r{<script>} }
-    bh.dropdown('') { expect(link_to: :xss_script).not_to generate %r{<script>} }
-    bh.nav { expect(link_to: :xss_script).not_to generate %r{<script>} }
-    bh.navbar(id: 'id') do
-      bh.vertical { expect(link_to: :xss_script).not_to generate %r{<script>} }
+    bh4.alert_box { expect(link_to: :xss_script).not_to generate %r{<script>} }
+    bh4.dropdown('') { expect(link_to: :xss_script).not_to generate %r{<script>} }
+    bh4.nav { expect(link_to: :xss_script).not_to generate %r{<script>} }
+    bh4.navbar(id: 'id') do
+      bh4.vertical { expect(link_to: :xss_script).not_to generate %r{<script>} }
     end
   end
 end

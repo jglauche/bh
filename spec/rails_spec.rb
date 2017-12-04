@@ -2,7 +2,7 @@ require 'spec_helper'
 Dir['./spec/rails/*_helper.rb'].each {|f| require f}
 
 describe 'When used in Rails' do
-  let(:bh) { RailsView.new }
+  let(:bh4. { RailsView.new }
   before { Bh.framework = :rails }
 
   all_tests_pass_for 'the alert_box helper'

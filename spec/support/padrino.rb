@@ -9,7 +9,7 @@ class PadrinoView
   include Padrino::Helpers::AssetTagHelpers # for link_to
   include Padrino::Helpers::FormHelpers # for button_to
   include Padrino::Routing::Helpers # for url_for
-  include Bh::Helpers
+  include Bh4::Helpers
 
   def self.app_name
     'test'

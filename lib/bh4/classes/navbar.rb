@@ -1,6 +1,6 @@
-require 'bh/classes/base'
+require 'bh4/classes/base'
 
-module Bh
+module Bh4
   module Classes
     class Navbar < Base
       # @return [#to_s] the style-related class to assign to the navbar.

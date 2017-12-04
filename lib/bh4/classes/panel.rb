@@ -1,6 +1,6 @@
-require 'bh/classes/base'
+require 'bh4/classes/base'
 
-module Bh
+module Bh4
   module Classes
     class Panel < Base
       # Differently from other classes, Panel works with no content or block,

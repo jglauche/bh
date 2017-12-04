@@ -1,6 +1,6 @@
-require 'bh/classes/dropdown'
+require 'bh4/classes/dropdown'
 
-module Bh
+module Bh4
   module Helpers
     # @see http://getbootstrap.com/components/#dropdowns
     # @see http://getbootstrap.com/components/#btn-dropdowns
@@ -28,7 +28,7 @@ module Bh
     # @option options [#to_s] :size the size of the button.
     # @yieldreturn [#to_s] the content of the dropdown.
     def dropdown(caption, options = {}, &block)
-      dropdown = Bh::Dropdown.new self, nil, options, &block
+      dropdown = Bh4::Dropdown.new self, nil, options, &block
       dropdown.extract! :id, :groupable, :direction, :align, :split, :context,
                         :size, :layout, :button
 

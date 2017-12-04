@@ -14,7 +14,7 @@ shared_examples_for 'no button_to options (Padrino)' do
 
     # @note: Only Padrino >= 0.13.0 renders the content of the block as a
     #        <button> so the exact content is only partially tested here.
-    expect(bh.button_to('/'){ 'content' }).to include 'content'
+    expect(bh4.button_to('/'){ 'content' }).to include 'content'
   end
 end
 

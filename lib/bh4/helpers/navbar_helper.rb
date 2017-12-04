@@ -1,7 +1,7 @@
-require 'bh/helpers/horizontal_helper'
-require 'bh/helpers/vertical_helper'
+require 'bh4/helpers/horizontal_helper'
+require 'bh4/helpers/vertical_helper'
 
-module Bh
+module Bh4
   module Helpers
     # Displays a Bootstrap-styled navbar.
     # @see http://getbootstrap.com/components/#navbar
@@ -33,7 +33,7 @@ module Bh
     #     end
     #   end
     def navbar(options = {}, &block)
-      navbar = Bh::Navbar.new(self, options, &block)
+      navbar = Bh4::Navbar.new(self, options, &block)
       navbar.extract! :inverted, :position, :padding, :fluid, :id
 
       navbar.append_class_to! :navigation, :navbar

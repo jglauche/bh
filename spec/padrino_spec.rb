@@ -2,7 +2,7 @@ require 'spec_helper'
 Dir['./spec/padrino/*_helper.rb'].each {|f| require f}
 
 describe 'When used in Padrino or Middleman' do
-  let(:bh) { PadrinoView.new }
+  let(:bh4. { PadrinoView.new }
   before { Bh.framework = :padrino }
 
   all_tests_pass_for 'the alert_box helper'

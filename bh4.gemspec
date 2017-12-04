@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'bh/version'
+require 'bh4/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "bh4"
-  spec.version       = Bh::VERSION
+  spec.version       = Bh4::VERSION
   spec.authors       = ["Jennifer Glauche", "Claudio Baccigalupo"]
   spec.email         = ["=^.^=@bh4.jglauche.de", "claudio@fullscreen.net"]
   spec.description   = %q{Bh4 - Bootstrap 4 Helpers}

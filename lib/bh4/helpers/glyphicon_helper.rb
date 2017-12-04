@@ -1,6 +1,6 @@
-require 'bh/helpers/icon_helper'
+require 'bh4/helpers/icon_helper'
 
-module Bh
+module Bh4
   module Helpers
     # Displays any of the 200 glyphicons available in Bootstrap.
     # @deprecated Use {#icon} instead.

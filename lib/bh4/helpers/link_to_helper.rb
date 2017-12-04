@@ -1,11 +1,11 @@
-require 'bh/classes/link_to'
-require 'bh/classes/alert_box'
-require 'bh/classes/dropdown'
-require 'bh/classes/nav'
-require 'bh/classes/stack'
-require 'bh/classes/vertical'
+require 'bh4/classes/link_to'
+require 'bh4/classes/alert_box'
+require 'bh4/classes/dropdown'
+require 'bh4/classes/nav'
+require 'bh4/classes/stack'
+require 'bh4/classes/vertical'
 
-module Bh
+module Bh4
   module Helpers
     # Overrides `link_to` to display a Bootstrap-styled link.
     # Can only be used in Ruby frameworks that provide the `link_to` method.
@@ -35,20 +35,20 @@ module Bh
     #         end
     #       end
     def link_to(*args, &block)
-      link_to = Bh::LinkTo.new self, *args, &block
+      link_to = Bh4::LinkTo.new self, *args, &block
 
-      link_to.append_class! :'alert-link' if Bh::Stack.find(Bh::AlertBox)
-      link_to.append_class! :'navbar-brand' if Bh::Stack.find(Bh::Vertical)
-      link_to.merge! role: :menuitem if Bh::Stack.find(Bh::Dropdown)
-      link_to.merge! tabindex: -1 if Bh::Stack.find(Bh::Dropdown)
+      link_to.append_class! :'alert-link' if Bh4::Stack.find(Bh4::AlertBox)
+      link_to.append_class! :'navbar-brand' if Bh4::Stack.find(Bh4::Vertical)
+      link_to.merge! role: :menuitem if Bh4::Stack.find(Bh4::Dropdown)
+      link_to.merge! tabindex: -1 if Bh4::Stack.find(Bh4::Dropdown)
       html = super link_to.content, link_to.url, link_to.attributes, &nil
 
-      if Bh::Stack.find(Bh::Dropdown)
-        container = Bh::Base.new(self) { html }
+      if Bh4::Stack.find(Bh4::Dropdown)
+        container = Bh4::Base.new(self) { html }
         container.merge! role: :presentation
         container.render_tag :li
-      elsif Bh::Stack.find(Bh::Nav)
-        container = Bh::Base.new(self) { html }
+      elsif Bh4::Stack.find(Bh4::Nav)
+        container = Bh4::Base.new(self) { html }
         container.append_class! :active if link_to.current_page?
         container.render_tag :li
       else

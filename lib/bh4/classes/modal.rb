@@ -1,6 +1,6 @@
-require 'bh/classes/button'
+require 'bh4/classes/button'
 
-module Bh
+module Bh4
   module Classes
     class Modal < Base
       # Differently from other classes, Modal works with no content or block,

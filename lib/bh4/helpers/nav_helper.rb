@@ -1,7 +1,7 @@
-require 'bh/classes/nav'
-require 'bh/classes/navbar'
+require 'bh4/classes/nav'
+require 'bh4/classes/navbar'
 
-module Bh
+module Bh4
   module Helpers
     # Displays a Bootstrap-styled nav.
     # @see http://getbootstrap.com/components/#nav
@@ -18,11 +18,11 @@ module Bh
     #     link_to 'Home', '/'
     #   end
     def nav(options = {}, &block)
-      nav = Bh::Nav.new(self, options, &block)
+      nav = Bh4::Nav.new(self, options, &block)
       nav.extract! :as, :layout
 
       nav.append_class! :nav
-      if Bh::Stack.find(Bh::Navbar)
+      if Bh4::Stack.find(Bh4::Navbar)
         nav.append_class! :'navbar-nav'
       else
         nav.merge! role: :tablist

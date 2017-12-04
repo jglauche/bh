@@ -1,19 +1,19 @@
-require 'bh/core_ext/rails/base_helper'
-require 'bh/core_ext/rails/form_builder'
+require 'bh4/core_ext/rails/base_helper'
+require 'bh4/core_ext/rails/form_builder'
 
-module Bh
+module Bh4
   module Rails
     module Helpers
       include BaseHelper
       include ActionView::Helpers::FormHelper # for form_for
 
       def form_for(record, options = {}, &block)
-        options[:layout] ||= 'navbar' if Bh::Stack.find(Bh::Navbar)
+        options[:layout] ||= 'navbar' if Bh4::Stack.find(Bh4::Navbar)
         add_form_options!(options) if options[:layout]
         html = super record, options, &block
 
-        if Bh::Stack.find(Bh::Nav)
-          container = Bh::Base.new(self) { html }
+        if Bh4::Stack.find(Bh4::Nav)
+          container = Bh4::Base.new(self) { html }
           container.render_tag :li
         else
           html

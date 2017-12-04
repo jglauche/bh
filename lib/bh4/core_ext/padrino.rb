@@ -1,10 +1,10 @@
-module Bh
+module Bh4
   module Extensions
     # Makes Bootstrap helpers available in Padrino applications.
     #
     # To use Bh in a Padrino app you need 2 steps:
     #
-    #   - include bh in the Gemfile
+    #   - include bh4.in the Gemfile
     #   - add `register Bh` in the `app.rb` file
     #
     # The following method adds `Bh` as one of the modules that can be registered
@@ -13,7 +13,7 @@ module Bh
     module Padrino
       # Register Bh as a Padrino app.
       def registered(app)
-        app.include Bh::Helpers
+        app.include Bh4::Helpers
       end
     end
 

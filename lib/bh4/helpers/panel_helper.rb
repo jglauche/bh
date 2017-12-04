@@ -1,8 +1,8 @@
-require 'bh/classes/panel'
-require 'bh/classes/panel_row'
-require 'bh/classes/stack'
+require 'bh4/classes/panel'
+require 'bh4/classes/panel_row'
+require 'bh4/classes/stack'
 
-module Bh
+module Bh4
   module Helpers
     # Displays a Bootstrap-styled panel.
     # @see http://getbootstrap.com/components/#panels
@@ -33,7 +33,7 @@ module Bh
     #         end
     #       end
     def panel(*args, &block)
-      panel = Bh::Panel.new self, *args, &block
+      panel = Bh4::Panel.new self, *args, &block
       panel.extract! :body, :context, :title, :heading, :tag
 
       panel.append_class! :panel
@@ -41,8 +41,8 @@ module Bh
       panel.merge_html! panel.body
       panel.prepend_html! panel.heading
 
-      if panel_row = Bh::Stack.find(Bh::PanelRow)
-        container = Bh::Base.new(self) { panel.content_tag panel.tag }
+      if panel_row = Bh4::Stack.find(Bh4::PanelRow)
+        container = Bh4::Base.new(self) { panel.content_tag panel.tag }
         container.append_class! panel_row.column_class
         container.render_tag :div
       else

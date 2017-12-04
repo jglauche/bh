@@ -1,6 +1,6 @@
-require 'bh/core_ext/rails/form/base_helper'
+require 'bh4/core_ext/rails/form/base_helper'
 
-module Bh
+module Bh4
   module Form
     module RadioButtonHelper
       include BaseHelper

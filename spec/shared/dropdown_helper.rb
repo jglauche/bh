@@ -39,7 +39,7 @@ shared_examples_for 'the :id dropdown option' do
 end
 
 shared_examples_for 'the :context dropdown option' do
-  Bh::Button.contexts.each do |context, context_class|
+  Bh4::Button.contexts.each do |context, context_class|
     specify %Q{set to :#{context}, adds the class "#{context_class}"} do
       html = %r{<button class="dropdown-toggle btn #{context_class}"}
       expect(dropdown: {context: context}).to generate html
@@ -48,7 +48,7 @@ shared_examples_for 'the :context dropdown option' do
 end
 
 shared_examples_for 'the :size dropdown option' do
-  Bh::Button.sizes.each do |size, size_class|
+  Bh4::Button.sizes.each do |size, size_class|
     specify %Q{set to :#{size}, adds the class "#{size_class}"} do
       html = %r{<button class="dropdown-toggle btn btn-default #{size_class}"}
       expect(dropdown: {size: size}).to generate html
@@ -57,7 +57,7 @@ shared_examples_for 'the :size dropdown option' do
 end
 
 shared_examples_for 'the :layout dropdown option' do
-  Bh::Button.layouts.each do |layout, layout_class|
+  Bh4::Button.layouts.each do |layout, layout_class|
     specify %Q{set to :#{layout}, adds the class "#{layout_class}"} do
       html = %r{<button class="dropdown-toggle btn btn-default #{layout_class}"}
       expect(dropdown: {layout: layout}).to generate html
@@ -66,7 +66,7 @@ shared_examples_for 'the :layout dropdown option' do
 end
 
 shared_examples_for 'the :groupable dropdown option' do
-  Bh::Dropdown.groupables.each do |groupable, groupable_class|
+  Bh4::Dropdown.groupables.each do |groupable, groupable_class|
     specify %Q{set to :#{groupable}, adds the class "#{groupable_class}"} do
       html = %r{^<div class="#{groupable_class}">}
       expect(dropdown: {groupable: groupable}).to generate html
@@ -75,7 +75,7 @@ shared_examples_for 'the :groupable dropdown option' do
 end
 
 shared_examples_for 'the :direction dropdown option' do
-  Bh::Dropdown.directions.each do |direction, direction_class|
+  Bh4::Dropdown.directions.each do |direction, direction_class|
     specify %Q{set to :#{direction}, adds the class "#{direction_class}"} do
       html = %r{^<div class="btn-group #{direction_class}">}
       expect(dropdown: {direction: direction}).to generate html
@@ -84,7 +84,7 @@ shared_examples_for 'the :direction dropdown option' do
 end
 
 shared_examples_for 'the :align dropdown option' do
-  Bh::Dropdown.aligns.each do |align, align_class|
+  Bh4::Dropdown.aligns.each do |align, align_class|
     specify %Q{set to :#{align}, adds the class "#{align_class}"} do
       html = %r{<ul class="dropdown-menu #{align_class}" role="menu"}
       expect(dropdown: {align: align}).to generate html

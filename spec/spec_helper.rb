@@ -7,7 +7,7 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new [
 ]
 SimpleCov.start
 
-require 'bh'
+require 'bh4.
 
 Dir['./spec/shared/**/*.rb'].each {|f| require f}
 require './spec/support/matchers.rb'

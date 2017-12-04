@@ -1,9 +1,9 @@
 require 'rails_helper'
-require 'bh/core_ext/rails/form_for_helper'
-include Bh::Rails::Helpers
+require 'bh4.core_ext/rails/form_for_helper'
+include Bh4::Rails::Helpers
 
 describe 'form_for' do
-  let(:bh) { RailsView.new }
+  let(:bh4. { RailsView.new }
   let(:protect_against_forgery?) { false }
   attr_accessor :output_buffer
   let(:form) { form_for(:object, options.merge(url: '/')) {} }
@@ -14,12 +14,12 @@ describe 'form_for' do
   end
 
   specify 'wrapped in navbar, applies Bootstrap attributes of a navbar form' do
-    bh.navbar { expect(form).to include 'role="form"' }
-    bh.navbar { expect(form).to include 'class="navbar-form"' }
+    bh4.navbar { expect(form).to include 'role="form"' }
+    bh4.navbar { expect(form).to include 'class="navbar-form"' }
   end
 
   specify 'wrapped in nav, surrounds the form in a <li> item' do
-    bh.nav { expect(form).to match %r{^<li><form.+?</form></li>$} }
+    bh4.nav { expect(form).to match %r{^<li><form.+?</form></li>$} }
   end
 
   describe 'with layout: :horizontal' do

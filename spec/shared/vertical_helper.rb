@@ -22,7 +22,7 @@ shared_examples_for 'no vertical options' do
       <span class="icon-bar"></span></button>
       content</div>
     EOT
-    bh.navbar { expect(:vertical).to generate %r{#{html}} }
+    bh4.navbar { expect(:vertical).to generate %r{#{html}} }
   end
 end
 
@@ -30,7 +30,7 @@ shared_examples_for 'extra vertical options' do
   specify 'passes the options to the <div> element' do
     options = {class: 'important', data: {value: 1}, id: 'my-navbar-header'}
     html = %r{<div class="important navbar-header" data-value="1" id="my-navbar-header">}
-    bh.navbar { expect(vertical: options).to generate html }
+    bh4.navbar { expect(vertical: options).to generate html }
   end
 end
 
@@ -38,6 +38,6 @@ shared_examples_for 'the vertical wrapped in a navbar with :id' do
   it 'uses the id from the navbar' do
     id = 'my-navbar'
     html = %r{button class="navbar-toggle" data-target="##{id}"}
-    bh.navbar(id: id) { expect(:vertical).to generate html}
+    bh4.navbar(id: id) { expect(:vertical).to generate html}
   end
 end

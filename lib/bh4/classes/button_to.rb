@@ -1,6 +1,6 @@
-require 'bh/classes/button'
+require 'bh4/classes/button'
 
-module Bh
+module Bh4
   module Classes
     class ButtonTo < Button
       def initialize(app = nil, *args, &block)

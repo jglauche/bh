@@ -1,6 +1,6 @@
-require 'bh/classes/button'
+require 'bh4/classes/button'
 
-module Bh
+module Bh4
   module Classes
     class Dropdown < Button
       # @return [#to_s] the group-related class to assign to the dropdown.

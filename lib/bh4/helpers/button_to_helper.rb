@@ -1,8 +1,8 @@
-require 'bh/classes/button_to'
-require 'bh/classes/navbar'
-require 'bh/classes/stack'
+require 'bh4/classes/button_to'
+require 'bh4/classes/navbar'
+require 'bh4/classes/stack'
 
-module Bh
+module Bh4
   module Helpers
     # Overrides `button_to` to display a Bootstrap-styled button.
     # Can only be used in Ruby frameworks that provide the `button_to` method.
@@ -38,14 +38,14 @@ module Bh
     #         content_tag :strong, "Delete user"
     #       end
     def button_to(*args, &block)
-      button_to = Bh::ButtonTo.new self, *args, &block
+      button_to = Bh4::ButtonTo.new self, *args, &block
 
       if button_to.extract! :context, :size, :layout
         button_to.append_button_class! :btn
         button_to.append_button_class! button_to.context_class
         button_to.append_button_class! button_to.size_class
         button_to.append_button_class! button_to.layout_class
-        button_to.append_form_class! 'navbar-form' if Bh::Stack.find(Bh::Navbar)
+        button_to.append_form_class! 'navbar-form' if Bh4::Stack.find(Bh4::Navbar)
       end
 
       html = if block_given? && button_to.accepts_block?
@@ -54,8 +54,8 @@ module Bh
         super button_to.content, button_to.url, button_to.attributes, &nil
       end
 
-      if Bh::Stack.find(Bh::Nav)
-        container = Bh::Base.new(self) { html }
+      if Bh4::Stack.find(Bh4::Nav)
+        container = Bh4::Base.new(self) { html }
         container.render_tag :li
       else
         html

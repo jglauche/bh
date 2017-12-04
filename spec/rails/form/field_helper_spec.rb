@@ -1,6 +1,6 @@
 require 'rails_helper'
-require 'bh/core_ext/rails/form_for_helper'
-include Bh::Rails::Helpers
+require 'bh4.core_ext/rails/form_for_helper'
+include Bh4::Rails::Helpers
 
 def self.field_helpers_to_test
   types = %w(email number password phone search telephone text url)

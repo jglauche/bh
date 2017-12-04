@@ -1,11 +1,11 @@
-require 'bh/core_ext/rails/base_helper'
-require 'bh/helpers/glyphicon_helper'
+require 'bh4/core_ext/rails/base_helper'
+require 'bh4/helpers/glyphicon_helper'
 
-module Bh
+module Bh4
   module Form
     module BaseHelper
-      include Bh::Rails::BaseHelper
-      include Bh::Helpers
+      include Bh4::Rails::BaseHelper
+      include Bh4::Helpers
 
     private
 

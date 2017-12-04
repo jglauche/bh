@@ -1,6 +1,6 @@
-require 'bh/classes/icon'
+require 'bh4/classes/icon'
 
-module Bh
+module Bh4
   module Helpers
     # Displays a Bootstrap-styled vector icon.
     # @see http://getbootstrap.com/components/#glyphicons
@@ -16,7 +16,7 @@ module Bh
     # @example Display the "fire" font awesome icon with a title
     #   icon 'fire', library: :font_awesome, title: 'Hot'
     def icon(name = nil, options = {})
-      icon = Bh::Icon.new self, nil, options.merge(name: name)
+      icon = Bh4::Icon.new self, nil, options.merge(name: name)
       icon.extract! :library, :name
 
       icon.append_class! icon.library_class

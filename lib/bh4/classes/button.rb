@@ -1,6 +1,6 @@
-require 'bh/classes/base'
+require 'bh4/classes/base'
 
-module Bh
+module Bh4
   module Classes
     class Button < Base
       # @return [#to_s] the context-related class to assign to the button.

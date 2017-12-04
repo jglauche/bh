@@ -1,6 +1,6 @@
-require 'bh/classes/alert_box'
+require 'bh4/classes/alert_box'
 
-module Bh
+module Bh4
   module Helpers
     # Displays a Bootstrap-styled alert message.
     # @see http://getbootstrap.com/components/#alerts
@@ -27,7 +27,7 @@ module Bh
     #         content_tag :strong, 'User updated successfully'
     #       end
     def alert_box(*args, &block)
-      alert_box = Bh::AlertBox.new(self, *args, &block)
+      alert_box = Bh4::AlertBox.new(self, *args, &block)
       alert_box.extract! :context, :priority, :dismissible
 
       alert_box.append_class! :alert

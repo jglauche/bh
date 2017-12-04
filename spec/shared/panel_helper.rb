@@ -48,7 +48,7 @@ shared_examples_for 'the :body panel option' do
   end
 
   specify 'given neither content nor a block, it is displayed as the content' do
-    expect(bh.panel(body: 'Body')).to match html
+    expect(bh4.panel(body: 'Body')).to match html
   end
 end
 
@@ -60,7 +60,7 @@ shared_examples_for 'the :tag panel option' do
 end
 
 shared_examples_for 'the :context panel option' do
-  Bh::Panel.contexts.each do |context, context_class|
+  Bh4::Panel.contexts.each do |context, context_class|
     specify %Q{set to :#{context}, adds the class "#{context_class}"} do
       html = %r{^<div class="panel #{context_class}">.*</div>$}m
       expect(panel: {context: context}).to generate html
@@ -71,6 +71,6 @@ end
 shared_examples_for 'the panel wrapped in panel_row' do
   specify 'wraps the panel <div> in a grid <div> with the :column_class class of the panel row' do
     html = %r{^<div class="col-sm-4"><div class="panel panel-default">(?:|<div class="panel-body">)content(?:|</div>)</div></div>$}
-    bh.panel_row(column_class: 'col-sm-4') { expect(:panel).to generate html }
+    bh4.panel_row(column_class: 'col-sm-4') { expect(:panel).to generate html }
   end
 end

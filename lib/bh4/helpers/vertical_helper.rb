@@ -1,7 +1,7 @@
-require 'bh/classes/navbar'
-require 'bh/classes/vertical'
+require 'bh4/classes/navbar'
+require 'bh4/classes/vertical'
 
-module Bh
+module Bh4
   module Helpers
     # Displays the non-collapsable portion of a Bootstrap-styled navbar.
     # @see http://getbootstrap.com/components/#navbar
@@ -22,8 +22,8 @@ module Bh
     #     end
     #   end
     def vertical(*args, &block)
-      if navbar = Bh::Stack.find(Bh::Navbar)
-        vertical = Bh::Vertical.new self, *args, &block
+      if navbar = Bh4::Stack.find(Bh4::Navbar)
+        vertical = Bh4::Vertical.new self, *args, &block
         vertical.append_class! :'navbar-header'
         vertical.prepend_html! vertical.toggle_button(navbar.id)
         vertical.render_tag :div
