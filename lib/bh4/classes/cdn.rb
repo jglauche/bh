@@ -7,7 +7,7 @@ module Bh4
       # @note if unspecified, the version should match the latest available
       #   version. If that's not the case, it's a bug and should be fixed.
       def self.bootstrap(options = {})
-        options[:version] ||= '3.3.6'
+        options[:version] ||= '4.0.0-beta2'
         cdn_asset options.merge(library: 'bootstrap')
       end
 

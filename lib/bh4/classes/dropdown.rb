@@ -18,6 +18,10 @@ module Bh4
         Dropdown.aligns[@options[:align]]
       end
 
+			def position_class
+				Dropdown.positions[@options[:position]]
+			end
+
       def id
         @options.fetch :id, "dropdown-#{rand 10**10}"
       end
@@ -51,6 +55,13 @@ module Bh4
           klass[:right] = :'dropdown-menu-right'
         end
       end
+
+			def self.positions
+        HashWithIndifferentAccess.new.tap do |klass|
+          klass[:right] = :'ml-auto'
+        end
+
+			end
     end
   end
 end

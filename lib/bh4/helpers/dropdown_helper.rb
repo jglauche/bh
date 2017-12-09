@@ -30,14 +30,15 @@ module Bh4
     def dropdown(caption, options = {}, &block)
       dropdown = Bh4::Dropdown.new self, nil, options, &block
       dropdown.extract! :id, :groupable, :direction, :align, :split, :context,
-                        :size, :layout, :button
+                        :size, :layout, :button, :position
 
       dropdown.extract_from :button, [:context, :size, :layout]
       dropdown.merge! button: {caption: caption, id: dropdown.id}
-      dropdown.append_class_to! :button, :btn
+			dropdown.append_class_to! :button, :btn
       dropdown.append_class_to! :button, dropdown.context_class
       dropdown.append_class_to! :button, dropdown.size_class
       dropdown.append_class_to! :button, dropdown.layout_class
+			dropdown.append_class_to! :div, dropdown.position_class 
       dropdown.append_class_to! :div, dropdown.groupable_class
       dropdown.append_class_to! :div, dropdown.direction_class
       #dropdown.append_class_to! :ul, :'dropdown-menu'
